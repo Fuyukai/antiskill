@@ -101,6 +101,14 @@ qt:
 [group("theming")]
 themes: gtk3 gtk4 qt
 
+# Sets up fish configs.
+fish:
+    ln -svf '{{absolute_path("./home/fish/config.fish")}}' ~/.config/fish/config.fish
+    ln -svf '{{absolute_path("./home/fish/quotes.txt")}}' ~/.config/fish/quotes.txt
+
+# Sets up things relating to my shell.
+shell: fish
+
 # Sets up systemd user services.
 [group("configs")]
 services:
@@ -118,4 +126,4 @@ services:
 
 # Sets up my home config directory.
 [group("terminal")]
-home: foot labwc themes services 
+home: foot labwc themes shell services 

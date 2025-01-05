@@ -52,6 +52,7 @@ Software stack
 
 - Window manager/compositor: ``gui-wm/labwc``. May switch to something else in the future.
 - Terminal: ``gui-apps/foot`` via ``foot-server``.
+- Shell: ``app-shells/fish``. Might consider ``nushell`` at some point too.
 
 Theming
 ~~~~~~~
