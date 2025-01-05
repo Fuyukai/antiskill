@@ -51,6 +51,15 @@ labwc:
     ln -svf '{{absolute_path("./home/labwc/environment")}}' ~/.config/labwc/environment
     ln -svf '{{absolute_path("./home/labwc/rc.xml")}}' ~/.config/labwc/rc.xml
 
+gtk3:
+    ln -svf '{{absolute_path("./home/gtk-3.0/gtk.css")}}' ~/.config/gtk-3.0/gtk.css
+    ln -svf '{{absolute_path("./home/gtk-3.0/settings.ini")}}' ~/.config/gtk-3.0/settings.ini
+
+gtk4:
+    ln -svf '{{absolute_path("./home/gtk-4.0/gtk.css")}}' ~/.config/gtk-4.0/gtk.css
+
+themes: gtk3 gtk4
+
 services:
     ./symlink-services.fish
     systemctl --user daemon-reload
@@ -64,5 +73,4 @@ services:
     systemctl --user enable mako.service
     systemctl --user enable pipewire-pulse.socket pipewire.socket wireplumber.service
 
-
-home: foot labwc services
+home: foot labwc themes services 
