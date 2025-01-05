@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<labwc_config>
+    <core>
+        <decoration>server</decoration>
+    </core>
+
+    <theme>
+        <name>gruvbox-material-dark-blocks</name>
+        <cornerRadius>1</cornerRadius>
+        <font name="Terminus" size="12" />
+        <dropShadows />
+    </theme>
+
+    <desktops number="8" />
+
+    <windowSwitcher>
+        <fields>
+            <field content="title" width="100%" />
+        </fields>
+    </windowSwitcher>
+
+    <keyboard>
+        <numlock>off</numlock>
+        <keybind key="A-Tab">
+            <action name="NextWindow" />
+        </keybind>
+        <keybind key="A-F4">
+            <action name="Close" />
+        </keybind>
+        <keybind key="W-F">
+            <action name="ToggleMaximize" />
+        </keybind>
+        <keybind key="W-S-F">
+            <action name="ToggleFullscreen" />
+        </keybind>
+        <keybind key="W-T">
+            <action name="Execute" command="footclient" />
+        </keybind>
+
+        <!-- launcher menus -->
+        <keybind key="A-F2">
+            <action name="Execute">
+                <command>rofi -show combi -modes combi -combi-modes "drun,run" -run-command "uwsm app -- {cmd}"</command>
+            </action>
+        </keybind>
+
+        <keybind key="A-F3">
+            <action name="Execute">
+                <command>sh -c "/usr/bin/kaokao --disable-unicode --files
+                    /home/lura/.config/labwc/kaomoji.csv | wl-copy"</command>
+            </action>
+        </keybind>
+
+        <keybind key="A-F7">
+            <action name="Execute">
+                <command>sh -c "/usr/bin/kaokao --disable-kaomoji | wl-copy"</command>
+            </action>
+        </keybind>
+
+        <keybind key="W-V">
+            <action name="Execute">
+                <command>sh -c "cliphist list | rofi -dmenu | cliphist decode | wl-copy"</command>
+            </action>
+        </keybind>
+
+        <keybind key="Print">
+            <action name="Execute">
+                <command>sh -c "$HOME/.local/bin/screenshot"</command>
+            </action>
+
+        </keybind>
+        <keybind key="W-L">
+            <action name="Execute">
+                <command>hyprlock --immediate</command>
+            </action>
+        </keybind>
+
+        <!-- media keys -->
+        <keybind key="XF86AudioRaiseVolume">
+            <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+" />
+        </keybind>
+        <keybind key="XF86AudioLowerVolume">
+            <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-" />
+        </keybind>
+        <keybind key="XF86AudioMute">
+            <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" />
+        </keybind>
+        <keybind key="XF86AudioPlay">
+            <action name="Execute" command="playerctl play-pause" />
+        </keybind>
+        <keybind key="XF86AudioNext">
+            <action name="Execute" command="playerctl next" />
+        </keybind>
+        <keybind key="XF86AudioPrev">
+            <action name="Execute" command="playerctl previous" />
+        </keybind>
+
+        <!-- virtual desktop binds -->
+        <keybind key="W-1">
+            <action name="GoToDesktop" to="1" />
+        </keybind>
+        <keybind key="W-2">
+            <action name="GoToDesktop" to="2" />
+        </keybind>
+        <keybind key="W-3">
+            <action name="GoToDesktop" to="3" />
+        </keybind>
+        <keybind key="W-4">
+            <action name="GoToDesktop" to="4" />
+        </keybind>
+        <keybind key="W-5">
+            <action name="GoToDesktop" to="5" />
+        </keybind>
+        <keybind key="W-6">
+            <action name="GoToDesktop" to="6" />
+        </keybind>
+        <keybind key="W-7">
+            <action name="GoToDesktop" to="7" />
+        </keybind>
+        <keybind key="W-8">
+            <action name="GoToDesktop" to="8" />
+        </keybind>
+        <keybind key="W-S-1">
+            <action name="SendToDesktop" to="1" />
+        </keybind>
+        <keybind key="W-S-2">
+            <action name="SendToDesktop" to="2" />
+        </keybind>
+        <keybind key="W-S-3">
+            <action name="SendToDesktop" to="3" />
+        </keybind>
+        <keybind key="W-S-4">
+            <action name="SendToDesktop" to="4" />
+        </keybind>
+        <keybind key="W-S-5">
+            <action name="SendToDesktop" to="5" />
+        </keybind>
+        <keybind key="W-S-6">
+            <action name="SendToDesktop" to="6" />
+        </keybind>
+        <keybind key="W-S-7">
+            <action name="SendToDesktop" to="7" />
+        </keybind>
+        <keybind key="W-S-8">
+            <action name="SendToDesktop" to="8" />
+        </keybind>
+
+        <keybind key="W-S-Return">
+            <action name="ForEach">
+                <then>
+                    <action name="MoveToOutput" direction="left" wrap="yes" />
+                </then>
+            </action>
+        </keybind>
+        <keybind key="W-S-Left">
+            <action name="MoveToOutput" direction="left" wrap="true" />
+        </keybind>
+        <keybind key="W-S-Right">
+            <action name="MoveToOutput" direction="right" wrap="true" />
+        </keybind>
+    </keyboard>
+
+    <mouse>
+        <default />
+        <context name="frame">
+            <!-- allow moving windows around with Super+Drag -->
+            <mousebind button="W-Left" action="Drag">
+                <action name="Move" />
+            </mousebind>
+            <mousebind button="W-Right" action="Press">
+                <action name="Focus" />
+                <action name="Raise" />
+                <action name="Unshade" />
+            </mousebind>
+            <mousebind button="W-Right" action="Drag">
+                <action name="Resize" />
+            </mousebind>
+        </context>
+
+        <!-- remove root menu entirely -->
+        <context name="Root">
+            <mousebind button="Left" action="Press">
+                <action name="None" />
+            </mousebind>
+        </context>
+    </mouse>
+
+    <libinput>
+        <device>
+            <!-- fuck off mouse accel -->
+            <accelProfile>flat</accelProfile>
+            <naturalScroll />
+        </device>
+    </libinput>
+
+    <windowRules>
+        <windowRule identifier="gamescope" title="" type="">
+            <action name="ToggleFullscreen" />
+        </windowRule>
+    </windowRules>
+
+    <placement>
+        <policy />
+    </placement>
+    
+</labwc_config>

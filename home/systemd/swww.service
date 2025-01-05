@@ -1,0 +1,11 @@
+[Unit]
+Description=A Solution to your Wayland Wallpaper Woes
+PartOf=graphical-session.target
+After=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+ExecStart=/usr/bin/swww-daemon
+
+[Install]
+WantedBy=graphical-session.target

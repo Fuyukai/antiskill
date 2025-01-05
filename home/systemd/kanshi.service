@@ -1,0 +1,11 @@
+[Unit]
+Description=Monitor config
+PartOf=graphical-session.target
+After=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+ExecStart=/usr/bin/kanshi
+
+[Install]
+WantedBy=graphical-session.target

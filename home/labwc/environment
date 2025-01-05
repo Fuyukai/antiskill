@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+# shellcheck disable=SC2034
+
+XKB_DEFAULT_LAYOUT=gb
+# set the compose key to the right-alt (altgr) key 
+XKB_DEFAULT_OPTIONS=compose:menu
+
+XCURSOR_SIZE=24
+
+# required due to nvidia shenanigans
+WLR_NO_HARDWARE_CURSORS=1
+
+# other nvidia shenanigans
+LIBVA_DRIVER_NAME=nvidia
+GBM_BACKEND=nvidia-drm
+__GLX_VENDOR_LIBRARY_NAME=nvidia

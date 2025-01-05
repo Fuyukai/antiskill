@@ -33,4 +33,20 @@ My portage configuration is under ``portage``, with the following layout:
 I use limine for my bootloader; the config is at ``bootloader/limine.conf`` and my background
 for it is at ``bootloader/background.png``.
 
+Home
+----
 
+I use `uwsm <https://github.com/Vladimir-csp/uwsm>`_ to launch my Wayland compositor.
+
+Current software stack:
+
+- Window manager/compositor: ``gui-wm/labwc``. May switch to something else in the future.
+- Terminal: ``gui-apps/foot`` via ``foot-server``.
+
+Autostart
+~~~~~~~~~
+
+I don't use any compositor autostart features; instead, I use systemd user services. These can be
+found in ``home/systemd``.
+
+Some of these are specific to a WM.
