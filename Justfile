@@ -109,6 +109,11 @@ fish:
 # Sets up things relating to my shell.
 shell: fish
 
+# Symlinks my monitor layout config.
+[group("configs")]
+kanshi:
+    ln -svf '{{absolute_path("./home/kanshi/config")}}' ~/.config/kanshi/config
+
 # Sets up systemd user services.
 [group("configs")]
 services:
@@ -126,4 +131,4 @@ services:
 
 # Sets up my home config directory.
 [group("terminal")]
-home: foot labwc themes shell services 
+home: foot labwc themes shell kanshi services 
