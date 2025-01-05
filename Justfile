@@ -108,12 +108,14 @@ qt:
 themes: gtk3 gtk4 qt
 
 # Sets up fish configs.
+[group("shell")]
 fish:
     mkdir -pv ~/.config/fish
     ln -svf '{{absolute_path("./home/fish/config.fish")}}' ~/.config/fish/config.fish
     ln -svf '{{absolute_path("./home/fish/quotes.txt")}}' ~/.config/fish/quotes.txt
 
 # Sets up things relating to my shell.
+[group("shell")]
 shell: fish
     ln -svf '{{absolute_path("./home/hyfetch.json")}}' ~/.config/hyfetch.json
     mkdir -pv ~/.config/atuin
@@ -124,6 +126,13 @@ shell: fish
 kanshi:
     mkdir -pv ~/.config/kanshi
     ln -svf '{{absolute_path("./home/kanshi/config")}}' ~/.config/kanshi/config
+
+# Sets up Rofi, my launcher.
+[group("config")]
+rofi:
+    mkdir -pv ~/.config/rofi
+    ln -svf '{{absolute_path("./home/rofi/config.rasi")}}' ~/.config/rofi/config.rasi
+    ln -svf '{{absolute_path("./home/rofi/theme.rasi")}}' ~/.config/rofi/theme.rasi
 
 # Sets up systemd user services.
 [group("configs")]
@@ -137,10 +146,10 @@ services:
     systemctl --user enable xwayland-satellite.service
 
     systemctl --user enable foot-server.socket
-    systemctl --user enable --now atuin-daemon.socket
+    systemctl --user enable atuin-daemon.socket
     systemctl --user enable mako.service
     systemctl --user enable pipewire-pulse.socket pipewire.socket wireplumber.service
 
 # Sets up my home config directory.
 [group("terminal")]
-home: foot labwc themes shell kanshi services 
+home: foot labwc rofi themes shell kanshi services 

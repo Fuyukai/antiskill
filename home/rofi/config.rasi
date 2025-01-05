@@ -1,0 +1,19 @@
+configuration {
+	font: "Iosevka 11";
+	sorting-method: "fzf";
+	sort: false;
+	show-icons: true;
+	terminal: "footclient";
+
+    timeout {
+        action: "kb-cancel";
+        delay:  0;
+    }
+    filebrowser {
+        directories-first: true;
+        sorting-method:    "name";
+    }
+}
+
+
+@theme "theme"

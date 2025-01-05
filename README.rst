@@ -54,6 +54,7 @@ Software stack
 - Terminal: ``gui-apps/foot`` via ``foot-server``.
 - Shell: ``app-shells/fish``. Might consider ``nushell`` at some point too.
 - Shell history: ``app-shells/atuin``, with daemon enabled as a systemd socket activation unit
+- Launcher: ``gui-apps/rofi-wayland``
 
 Theming
 ~~~~~~~
