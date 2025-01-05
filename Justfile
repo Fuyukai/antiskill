@@ -1,15 +1,22 @@
+# Prints a help message.
 default:
     @echo "Use just system to setup system files"
     @echo "Or just home to setup home symbolic links"
     @echo "Needs sudo-rs installed first"
 
+# Copies bootloader configuration to /boot.
+[group("core")]
 copy-limine-config:
     sudo cp ./bootloader/limine.conf /boot/limine.conf
     sudo cp ./bootloader/background.png /boot/background.png
 
+# Copies my current kernel config to /usr/src/linux.
+[group("core")]
 copy-kernel-config: 
     sudo cp kernel/config /usr/src/linux/.config
 
+# Enables my systemd services.
+[group("core")]
 system-services:
     sudo systemctl enable ckb-next-daemon.service
     sudo systemctl enable systemd-networkd.service
@@ -18,48 +25,79 @@ system-services:
 
 # This is separate because of eselect-repository doing move writes rather than actually updating
 # the file.
+
+# Copies repos.conf back to this directory.
+[group("portage")]
 resync-repos:
     sudo cp /etc/portage/repos.conf/eselect-repo.conf ./portage
 
+# Copies local repos.conf to the portage configuration directory.
+[group("portage")]
 overwrite-repos:
     sudo cp ./portage/eselect-repo.conf /etc/portage/repos.conf/eselect-repo.conf
 
 # Note: This is synched from portage -> repo to avoid breakage
+# Copies the @world set back to this directory.
+[group("portage")]
 resync-world:
     sudo cp /var/lib/portage/world ./portage
 
+# Symlinks portage patches.
+[group("portage")]
 symlink-patches:
     sudo ./symlink-patches.fish
 
+# Symlinks portage configuration.
+[group("portage")]
 symlink-portage-dirs:
     sudo ./symlink-portage.fish
 
+# Resyncs all available portage configurations.
+[group("portage")]
 resync-portage: resync-repos resync-world symlink-patches symlink-portage-dirs
 
+# Syncs overlays from the internet.
+[group("portage")]
 emaint: resync-portage
     sudo emaint --auto sync
 
-emerge: emaint 
+# Does a system update/rebuild.
+[group("portage")]
+emerge-auvdn: emaint 
     sudo emerge -auvDNg --with-bdeps=y -j4 @world
 
+# Performs all system setup tasks.
+[group("terminal")]
 system: copy-kernel-config copy-limine-config resync-portage system-services
 
+# Symlinks the foot terminal configuration.
+[group("configs")]
 foot:
     ln -svf '{{absolute_path("./home/foot/foot.ini")}}' ~/.config/foot/foot.ini
 
+# Symlinks the labwc WM configuration.
+[group("configs")]
 labwc:
     ln -svf '{{absolute_path("./home/labwc/environment")}}' ~/.config/labwc/environment
     ln -svf '{{absolute_path("./home/labwc/rc.xml")}}' ~/.config/labwc/rc.xml
 
+# Symlinks the GTK 3.0 configs.
+[group("configs")]
 gtk3:
     ln -svf '{{absolute_path("./home/gtk-3.0/gtk.css")}}' ~/.config/gtk-3.0/gtk.css
     ln -svf '{{absolute_path("./home/gtk-3.0/settings.ini")}}' ~/.config/gtk-3.0/settings.ini
 
+# Symlinks the GTK 4.0 configs.
+[group("configs")]
 gtk4:
     ln -svf '{{absolute_path("./home/gtk-4.0/gtk.css")}}' ~/.config/gtk-4.0/gtk.css
 
+# Symlinks all theming-related configs.
+[group("configs")]
 themes: gtk3 gtk4
 
+# Sets up systemd user services.
+[group("configs")]
 services:
     ./symlink-services.fish
     systemctl --user daemon-reload
@@ -73,4 +111,6 @@ services:
     systemctl --user enable mako.service
     systemctl --user enable pipewire-pulse.socket pipewire.socket wireplumber.service
 
+# Sets up my home config directory.
+[group("terminal")]
 home: foot labwc themes services 
