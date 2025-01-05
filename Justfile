@@ -73,26 +73,32 @@ system: copy-kernel-config copy-limine-config resync-portage system-services
 # Symlinks the foot terminal configuration.
 [group("configs")]
 foot:
+    mkdir -pv ~/.config/foot
     ln -svf '{{absolute_path("./home/foot/foot.ini")}}' ~/.config/foot/foot.ini
 
 # Symlinks the labwc WM configuration.
 [group("configs")]
 labwc:
+    mkdir -pv ~/.config/labwc
     ln -svf '{{absolute_path("./home/labwc/environment")}}' ~/.config/labwc/environment
     ln -svf '{{absolute_path("./home/labwc/rc.xml")}}' ~/.config/labwc/rc.xml
 
 # Symlinks the GTK 3.0 configs.
 [group("theming")]
 gtk3:
+    mkdir -pv ~/.config/gtk-3.0
     ln -svf '{{absolute_path("./home/gtk-3.0/gtk.css")}}' ~/.config/gtk-3.0/gtk.css
     ln -svf '{{absolute_path("./home/gtk-3.0/settings.ini")}}' ~/.config/gtk-3.0/settings.ini
 
 # Symlinks the GTK 4.0 configs.
 [group("theming")]
 gtk4:
+    mkdir -pv ~/.config/gtk-4.0
     ln -svf '{{absolute_path("./home/gtk-4.0/gtk.css")}}' ~/.config/gtk-4.0/gtk.css
 
+# Symlinks the QT configs.
 qt:
+    mkdir -pv ~/.config/qt5ct ~/.config/qt6ct ~/.config/kvantum
     ln -svf '{{absolute_path("./home/kvantum/kvantum.kvconfig")}}' ~/.config/Kvantum/kvantum.kvconfig
     ln -svf '{{absolute_path("./home/qt5ct/qt5ct.conf")}}' ~/.config/qt5ct/qt5ct.conf
     ln -svf '{{absolute_path("./home/qt6ct/qt6ct.conf")}}' ~/.config/qt6ct/qt6ct.conf
@@ -103,16 +109,20 @@ themes: gtk3 gtk4 qt
 
 # Sets up fish configs.
 fish:
+    mkdir -pv ~/.config/fish
     ln -svf '{{absolute_path("./home/fish/config.fish")}}' ~/.config/fish/config.fish
     ln -svf '{{absolute_path("./home/fish/quotes.txt")}}' ~/.config/fish/quotes.txt
 
 # Sets up things relating to my shell.
 shell: fish
     ln -svf '{{absolute_path("./home/hyfetch.json")}}' ~/.config/hyfetch.json
+    mkdir -pv ~/.config/atuin
+    ln -svf '{{absolute_path("./home/atuin/config.toml")}}' ~/.config/atuin/config.toml
 
 # Symlinks my monitor layout config.
 [group("configs")]
 kanshi:
+    mkdir -pv ~/.config/kanshi
     ln -svf '{{absolute_path("./home/kanshi/config")}}' ~/.config/kanshi/config
 
 # Sets up systemd user services.
