@@ -137,6 +137,7 @@ services:
     systemctl --user enable xwayland-satellite.service
 
     systemctl --user enable foot-server.socket
+    systemctl --user enable --now atuin-daemon.socket
     systemctl --user enable mako.service
     systemctl --user enable pipewire-pulse.socket pipewire.socket wireplumber.service
 
