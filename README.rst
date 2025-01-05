@@ -21,6 +21,7 @@ Using ``cachyos-sources`` with
 My kernel config is tailored to my setup and likely won't work on any other machine.
 
 Known problems:
+
 - Power button doesn't work. Not sure why. Probably accidentally disabled something in ACPI 
   settings.
 
