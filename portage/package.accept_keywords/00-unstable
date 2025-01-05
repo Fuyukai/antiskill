@@ -1,0 +1,12 @@
+*/*::guru ~amd64
+*/*::gentoo ~amd64
+*/*::wayland-desktop ~amd64
+*/*::ribbon ~amd64
+*/*::CachyOS-kernels ~amd64
+*/*::local ~amd64
+*/*::lura-overlay ~amd64
+*/*::xarblu-overlay ~amd64
+*/*::khoverlay ~amd64
+*/*::steam-overlay ~amd64
+
+cosmic-de/* ~amd64

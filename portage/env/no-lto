@@ -1,0 +1,2 @@
+
+COMMON_FLAGS="-O2 -pipe -march=native -mtune=native -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"

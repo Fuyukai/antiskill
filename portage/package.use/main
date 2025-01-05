@@ -1,0 +1,82 @@
+## The basics!
+# CPU flags for my Ryzen 2600.
+*/* CPU_FLAGS_X86: aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt rdrand sha sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3
+
+# Enable wayland and audio globally.
+*/* wayland pipewire pulseaudio qml screencast
+media-libs/libcanberra alsa
+media-video/pipewire sound-server pipewire-alsa flatpak -bluetooth
+
+# Use dbus-broker ratther than regular dbus.
+*/* dbus-broker
+
+# No handbooks.
+*/* -handbook
+
+# GStreamer instead of VLC.
+*/* gstreamer -vlc
+
+# Use the dist-kernel when available.
+*/* dist-kernel
+
+# Things tend to break if I do this :(
+*/* introspection
+
+# Use the latest Python.
+*/* PYTHON_TARGETS: python3_13
+*/* PYTHON_SINGLE_TARGET: -* python3_13
+
+# Use LuaJIT when possible.
+*/* LUA_TARGETS: luajit
+*/* LUA_SINGLE_TARGET: -* luajit
+media-video/wireplumber LUA_SINGLE_TARGET: lua5-4
+
+# Unset things I don't care about.
+*/* -nls -gbdm -upower -wifi -cups -xvid -bluetooth -alsa -gpm -udisks -startup-notification
+
+sys-apps/util-linux -logger -su
+
+# Bootloader config
+sys-boot/limine -* uefi64
+sys-boot/limine LLVM_SLOT: 18
+
+## Kernel and system admin stuff
+# Kernel config, use ugrd instead of dracut
+sys-kernel/installkernel ugrd
+# Required for Kernel Rust
+dev-lang/rust-bin rust-src
+
+llvm-core/llvm abi_x86_32
+llvm-core/clang abi_x86_32
+x11-drivers/nvidia-drivers -tools abi_x86_32
+
+sys-apps/hwloc VIDEO_CARDS: -*
+
+sys-fs/btrfs-progs -man
+
+# Temporary: Prevent mold pulling in everything.
+sys-kernel/cachyos-sources zfs -autofdo -hardened
+
+sys-apps/systemd sysv-utils
+
+## Misc library USEs
+dev-libs/libpcre jit
+media-video/ffmpeg vpx opus svt-av1 nvenc x265 webp 
+media-libs/openal -pulseaudio
+
+gnome-base/gvfs -cdda 
+
+## Terminal apps
+app-misc/tmux sixel
+
+## Desktop & desktop apps
+net-im/vesktop-bin L10N: -*
+
+# required for wayfire
+gui-libs/wlroots:0/17 x11-backend
+
+app-editors/vscode egl
+media-fonts/iosevka iosevka-aile iosevka-ss14 
+
+# no need for xfce4-panel
+xfce-base/thunar -trash-panel-plugin

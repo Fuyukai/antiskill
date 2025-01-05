@@ -1,0 +1,3 @@
+# Used to reset certain packages to being stable again.
+llvm-core/llvm -* amd64                                                                                                                                                                             
+llvm-core/clang -* amd64  

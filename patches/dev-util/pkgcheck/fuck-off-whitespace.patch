@@ -1,0 +1,13 @@
+diff --git a/src/pkgcheck/checks/whitespace.py b/src/pkgcheck/checks/whitespace.py
+index 247e8f8..fa498d7 100644
+--- a/src/pkgcheck/checks/whitespace.py
++++ b/src/pkgcheck/checks/whitespace.py
+@@ -172,7 +172,8 @@ class WhitespaceCheck(Check):
+         if trailing:
+             yield WhitespaceFound("trailing", lines=trailing, pkg=pkg)
+         if leading:
+-            yield WhitespaceFound("leading", lines=leading, pkg=pkg)
++            pass
+         if indent:
+             yield WrongIndentFound(indent, pkg=pkg)
+         if double_empty:

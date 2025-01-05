@@ -1,0 +1,174 @@
+# required by media-libs/mesa-24.3.2::gentoo
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=media-libs/libglvnd-1.7.0 abi_x86_32
+# required by x11-libs/libXext-1.3.6::gentoo
+# required by media-libs/libglvnd-1.7.0::gentoo[X]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libX11-1.8.10 abi_x86_32
+# required by media-libs/mesa-24.3.2::gentoo[X]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXext-1.3.6 abi_x86_32
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=gui-libs/egl-gbm-1.1.2 abi_x86_32
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=gui-libs/egl-wayland-1.1.17 abi_x86_32
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland,X]
+# required by @selected
+# required by @world (argument)
+>=gui-libs/egl-x11-1.0.0 abi_x86_32
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=media-libs/mesa-24.3.2 abi_x86_32
+# required by media-libs/mesa-24.3.2::gentoo
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libdrm-2.4.124 abi_x86_32
+# required by media-libs/mesa-24.3.2::gentoo[X]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libxcb-1.17.0 abi_x86_32
+# required by x11-libs/libxcb-1.17.0::gentoo
+# required by x11-libs/libX11-1.8.10::gentoo
+# required by media-libs/libglvnd-1.7.0::gentoo[X]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXau-1.0.12 abi_x86_32
+# required by x11-libs/libxcb-1.17.0::gentoo
+# required by x11-libs/libX11-1.8.10::gentoo
+# required by media-libs/libglvnd-1.7.0::gentoo[X]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXdmcp-1.1.5 abi_x86_32
+# required by media-libs/mesa-24.3.2::gentoo
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/expat-2.6.4 abi_x86_32
+# required by llvm-core/llvm-19.1.6::gentoo
+# required by media-libs/mesa-24.3.2::gentoo[llvm_slot_19,llvm]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=sys-libs/zlib-1.3.1-r1 abi_x86_32
+# required by media-libs/mesa-24.3.2::gentoo[llvm_slot_19,llvm]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=llvm-core/llvm-19.1.6 abi_x86_32
+# required by media-libs/mesa-24.3.2::gentoo[wayland]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/wayland-1.23.1 abi_x86_32
+# required by media-libs/mesa-24.3.2::gentoo[X]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libxshmfence-1.3.3 abi_x86_32
+# required by media-libs/mesa-24.3.2::gentoo[X]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXxf86vm-1.1.6 abi_x86_32
+# required by media-libs/mesa-24.3.2::gentoo[X]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXfixes-6.0.1 abi_x86_32
+# required by media-libs/mesa-24.3.2::gentoo[X]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/xcb-util-keysyms-0.4.1 abi_x86_32
+# required by media-libs/mesa-24.3.2::gentoo[zstd]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=app-arch/zstd-1.5.6 abi_x86_32
+# required by media-libs/mesa-24.3.2::gentoo[X]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXrandr-1.5.4 abi_x86_32
+# required by x11-libs/libXrandr-1.5.4::gentoo
+# required by media-libs/mesa-24.3.2::gentoo[X]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXrender-0.9.12 abi_x86_32
+# required by llvm-core/llvm-19.1.6::gentoo[libffi]
+# required by media-libs/mesa-24.3.2::gentoo[llvm_slot_19,llvm]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libffi-3.4.6-r2 abi_x86_32
+# required by llvm-core/llvm-19.1.6::gentoo[xml]
+# required by media-libs/mesa-24.3.2::gentoo[llvm_slot_19,llvm]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libxml2-2.13.5 abi_x86_32
+# required by dev-libs/libxml2-2.13.5::gentoo[icu]
+# required by llvm-core/llvm-19.1.6::gentoo[xml]
+# required by media-libs/mesa-24.3.2::gentoo[llvm_slot_19,llvm]
+# required by gui-libs/egl-gbm-1.1.2::gentoo
+# required by x11-drivers/nvidia-drivers-565.77::gentoo[wayland]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/icu-76.1-r1 abi_x86_32
+
+# required by sys-libs/gpm-1.20.7-r6::gentoo
+# required by dev-libs/newt-0.52.24::gentoo[gpm]
+# required by @selected
+# required by @world (argument)
+>=sys-libs/ncurses-6.5_p20241109 abi_x86_32
+
+# required by dev-libs/quazip-1.4-r1::gentoo
+# required by app-misc/ckb-0.6.0-r2::gentoo
+# required by ckb (argument)
+>=sys-libs/zlib-1.3.1-r1 minizip
+
+# required by app-portage/pfl-3.5.3::gentoo[network-cron]                                                                                                                                                                                   
+# required by pfl (argument)                                                                                                                                                                                                                
+>=sys-apps/util-linux-2.40.2 caps 
+
+# required by dev-libs/libayatana-appindicator-0.5.93::gentoo
+# required by media-sound/spotify-1.2.52::gentoo
+# required by spotify (argument)
+>=dev-libs/libdbusmenu-16.04.0-r2 gtk3
