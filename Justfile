@@ -108,6 +108,7 @@ fish:
 
 # Sets up things relating to my shell.
 shell: fish
+    ln -svf '{{absolute_path("./home/hyfetch.json")}}' ~/.config/hyfetch.json
 
 # Symlinks my monitor layout config.
 [group("configs")]
