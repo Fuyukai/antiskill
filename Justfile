@@ -16,12 +16,15 @@ system-services:
     sudo systemctl enable pfl.timer
     sudo systemctl enable scx.service
 
-# Note: These are synched from portage directories -> home in order to prevent breakage if
-# my ZFS /home fails to mount after a kernel update.
-# I also keep a minimal portage homedir in order to rebuild zfs-kmod.
+# This is separate because of eselect-repository doing move writes rather than actually updating
+# the file.
 resync-repos:
     sudo cp /etc/portage/repos.conf/eselect-repo.conf ./portage
 
+overwrite-repos:
+    sudo cp ./portage/eselect-repo.conf /etc/portage/repos.conf/eselect-repo.conf
+
+# Note: This is synched from portage -> repo to avoid breakage
 resync-world:
     sudo cp /var/lib/portage/world ./portage
 
@@ -33,8 +36,11 @@ symlink-portage-dirs:
 
 resync-portage: resync-repos resync-world symlink-patches symlink-portage-dirs
 
-emerge: resync-portage
-    sudo emerge -auvDNg --with-bdeps=y @world
+emaint: resync-portage
+    sudo emaint --auto sync
+
+emerge: emaint 
+    sudo emerge -auvDNg --with-bdeps=y -j4 @world
 
 system: copy-kernel-config copy-limine-config resync-portage system-services
 

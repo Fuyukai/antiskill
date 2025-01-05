@@ -3,6 +3,15 @@ More Config Files
 
 Yet another configuration directory. This is for Antiskill V4.
 
+Setup
+-----
+
+1. Install ``eselect-repository`` and ``git``: ``emerge -av eselect-repository dev-vcs/git``
+2. Enable my overlay: ``eselect repository add lura-overlay git https://github.com/Fuyukai/gentoo-overlay``
+3. Install ``sudo-rs`` and ``just``: ``env ACCEPT_KEYWORDS="~amd64" emerge -av sudo-rs just``
+4. Delete the old gentoo repository: ``rm -r /var/db/repos/gentoo``
+5. Rebuild world: ``just -v overwrite-repos emerge-auvdn``
+
 Kernel
 ------
 
