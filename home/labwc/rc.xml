@@ -8,6 +8,7 @@
         <name>gruvbox-material-dark-blocks</name>
         <cornerRadius>1</cornerRadius>
         <font name="Terminus" size="12" />
+        <keepBorder>no</keepBorder>
         <dropShadows />
     </theme>
 

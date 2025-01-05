@@ -82,19 +82,24 @@ labwc:
     ln -svf '{{absolute_path("./home/labwc/rc.xml")}}' ~/.config/labwc/rc.xml
 
 # Symlinks the GTK 3.0 configs.
-[group("configs")]
+[group("theming")]
 gtk3:
     ln -svf '{{absolute_path("./home/gtk-3.0/gtk.css")}}' ~/.config/gtk-3.0/gtk.css
     ln -svf '{{absolute_path("./home/gtk-3.0/settings.ini")}}' ~/.config/gtk-3.0/settings.ini
 
 # Symlinks the GTK 4.0 configs.
-[group("configs")]
+[group("theming")]
 gtk4:
     ln -svf '{{absolute_path("./home/gtk-4.0/gtk.css")}}' ~/.config/gtk-4.0/gtk.css
 
+qt:
+    ln -svf '{{absolute_path("./home/kvantum/kvantum.kvconfig")}}' ~/.config/Kvantum/kvantum.kvconfig
+    ln -svf '{{absolute_path("./home/qt5ct/qt5ct.conf")}}' ~/.config/qt5ct/qt5ct.conf
+    ln -svf '{{absolute_path("./home/qt6ct/qt6ct.conf")}}' ~/.config/qt6ct/qt6ct.conf
+    
 # Symlinks all theming-related configs.
-[group("configs")]
-themes: gtk3 gtk4
+[group("theming")]
+themes: gtk3 gtk4 qt
 
 # Sets up systemd user services.
 [group("configs")]

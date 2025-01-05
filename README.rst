@@ -47,10 +47,23 @@ Home
 
 I use `uwsm <https://github.com/Vladimir-csp/uwsm>`_ to launch my Wayland compositor.
 
-Current software stack:
+Software stack
+~~~~~~~~~~~~~~
 
 - Window manager/compositor: ``gui-wm/labwc``. May switch to something else in the future.
 - Terminal: ``gui-apps/foot`` via ``foot-server``.
+
+Theming
+~~~~~~~
+
+I do relatively minimal themeing these days, especially with GTK becoming less generally amenable
+to it.
+
+- GTK3: ``adw-gtk3``. GTK4: Adwaita. Both use `alpha-black <https://github.com/lassekongo83/adw-colors>`_
+  colours.
+- QT5/6: Kvantum `catpuccin-mocha-teal <https://github.com/catppuccin/Kvantum>`_.
+- Cursor: Catpuccin-Mocha-Dark
+- Icon theme: Qoqir
 
 Autostart
 ~~~~~~~~~
