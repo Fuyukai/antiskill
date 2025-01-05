@@ -56,6 +56,7 @@ media-fonts/noto-cjk
 media-fonts/noto-emoji
 media-fonts/terminus-font
 media-fonts/twemoji
+media-sound/pavucontrol
 media-sound/playerctl
 media-sound/spotify
 media-video/pipewire
@@ -85,5 +86,6 @@ x11-misc/qt5ct
 x11-terms/ghostty
 x11-themes/adw-gtk3
 x11-themes/catppuccin-cursors-bin
+x11-themes/kvantum
 x11-themes/qogir-icon-theme
 xfce-base/thunar
