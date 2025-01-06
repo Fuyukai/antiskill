@@ -70,19 +70,6 @@ emerge-auvdn: emaint
 [group("terminal")]
 system: copy-kernel-config copy-limine-config resync-portage system-services
 
-# Symlinks the foot terminal configuration.
-[group("configs")]
-foot:
-    mkdir -pv ~/.config/foot
-    ln -svf '{{absolute_path("./home/foot/foot.ini")}}' ~/.config/foot/foot.ini
-
-# Symlinks the labwc WM configuration.
-[group("configs")]
-labwc:
-    mkdir -pv ~/.config/labwc
-    ln -svf '{{absolute_path("./home/labwc/environment")}}' ~/.config/labwc/environment
-    ln -svf '{{absolute_path("./home/labwc/rc.xml")}}' ~/.config/labwc/rc.xml
-
 # Symlinks the GTK 3.0 configs.
 [group("theming")]
 gtk3:
@@ -121,18 +108,37 @@ shell: fish
     mkdir -pv ~/.config/atuin
     ln -svf '{{absolute_path("./home/atuin/config.toml")}}' ~/.config/atuin/config.toml
 
+# Symlinks the foot terminal configuration.
+[group("desktop")]
+foot:
+    mkdir -pv ~/.config/foot
+    ln -svf '{{absolute_path("./home/foot/foot.ini")}}' ~/.config/foot/foot.ini
+    systemctl --user enable foot-server.socket
+
+# Symlinks the labwc WM configuration.
+[group("desktop")]
+labwc:
+    mkdir -pv ~/.config/labwc
+    ln -svf '{{absolute_path("./home/labwc/environment")}}' ~/.config/labwc/environment
+    ln -svf '{{absolute_path("./home/labwc/rc.xml")}}' ~/.config/labwc/rc.xml
+
+
 # Symlinks my monitor layout config.
-[group("configs")]
+[group("desktop")]
 kanshi:
     mkdir -pv ~/.config/kanshi
     ln -svf '{{absolute_path("./home/kanshi/config")}}' ~/.config/kanshi/config
 
 # Sets up Rofi, my launcher.
-[group("config")]
+[group("desktop")]
 rofi:
     mkdir -pv ~/.config/rofi
     ln -svf '{{absolute_path("./home/rofi/config.rasi")}}' ~/.config/rofi/config.rasi
     ln -svf '{{absolute_path("./home/rofi/theme.rasi")}}' ~/.config/rofi/theme.rasi
+
+# Meta-recipe for setting up desktop apps.
+[group("desktop")]
+desktop: labwc kanshi rofi foot themes
 
 # Sets up systemd user services.
 [group("configs")]
@@ -152,4 +158,4 @@ services:
 
 # Sets up my home config directory.
 [group("terminal")]
-home: foot labwc rofi themes shell kanshi services 
+home: desktop shell services 
