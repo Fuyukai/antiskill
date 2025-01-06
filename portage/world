@@ -10,6 +10,7 @@ app-misc/cliphist
 app-misc/fastfetch
 app-misc/hyfetch
 app-misc/nwg-look
+app-misc/wayland-utils
 app-misc/zellij
 app-portage/emlop
 app-portage/gentoolkit
@@ -38,6 +39,7 @@ gui-apps/grim
 gui-apps/ironbar
 gui-apps/kanshi
 gui-apps/kaokao
+gui-apps/lswt
 gui-apps/mako
 gui-apps/qt6ct
 gui-apps/rofi-wayland
@@ -45,11 +47,13 @@ gui-apps/slurp
 gui-apps/swww
 gui-apps/uwsm
 gui-apps/walker
+gui-apps/waybar
 gui-apps/wl-clipboard
 gui-libs/xdg-desktop-portal-wlr
 gui-wm/labwc
 gui-wm/niri
 gui-wm/wayfire
+media-fonts/fontawesome
 media-fonts/iosevka
 media-fonts/noto
 media-fonts/noto-cjk

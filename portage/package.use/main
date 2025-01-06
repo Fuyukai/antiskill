@@ -75,6 +75,8 @@ net-im/vesktop-bin L10N: -*
 # required for wayfire
 gui-libs/wlroots:0/17 x11-backend
 
+gui-apps/waybar mpris 
+
 app-editors/vscode egl
 media-fonts/iosevka iosevka-aile iosevka-ss14 
 

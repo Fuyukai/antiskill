@@ -1,0 +1,11 @@
+[Unit]
+Description=Waybar auto-reloader
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl --user restart waybar.service
+
+[Install]
+WantedBy=graphical-session.target

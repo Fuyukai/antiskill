@@ -1,0 +1,69 @@
+{
+    "layer": "top",
+    "height": 20,
+    "spacing": 4,
+    "output": "HDMI-A-1",
+
+    "modules-left": [
+		"mpris"
+    ],
+    
+    "modules-center": ["clock"],
+    "modules-right": [
+    	"custom/weather",
+    	"pulseaudio", 
+    	"memory",
+    	"custom/notification"
+    ],
+
+	"clock": {
+		"timezones": ["Europe/London", "Europe/Berlin"],
+		"actions": {"on-scroll-up": "tz_up", "on-scroll-down": "tz_down"},
+		"tooltip": true,
+		"format": "\uf017 {:%R %z}",
+		"tooltip-format": "<tt>{:%A %F}</tt>"
+	},
+    
+    "memory": {
+        "format": "{used}GiB / {total}GiB",
+        "states": {
+            "medium": 50,
+            "high": 75,
+            "critical": 90
+        }
+    },
+
+    "pulseaudio": {
+        "format": "\uf025 {volume}%",
+        "format-muted": "[MUTED]",
+        "format-source": "{volume}% [IN]",
+        "format-source-muted": "[MUTED]",
+        "format-icons": {
+            "default": [""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+	"mpris": {
+		"interval": 1,
+		"player-icons": {
+			"spotify_player": "Spotify",
+			"spotify": "Spotify",
+			"firefox": "Firefox"
+		},
+		"status-icons": {
+			"playing": "\uf04b",
+			"paused": "\uf04c"
+		},
+		"format": "{status_icon} {player_icon}: {dynamic}"
+	},
+
+	"custom/weather": {
+	    "format": "{}C",
+	    "tooltip": true,
+	    "interval": 3600,
+	    "exec": "$HOME/.cargo/bin/wttrbar --location London",
+	    "return-type": "json",
+        "on-click": "xdg-open https://www.metoffice.gov.uk/weather/forecast/gcpvj0v07"
+	}
+}

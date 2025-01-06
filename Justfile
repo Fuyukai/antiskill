@@ -136,6 +136,13 @@ rofi:
     ln -svf '{{absolute_path("./home/rofi/config.rasi")}}' ~/.config/rofi/config.rasi
     ln -svf '{{absolute_path("./home/rofi/theme.rasi")}}' ~/.config/rofi/theme.rasi
 
+# Sets up the configs and scripts for Waybar.
+[group("desktop")]
+waybar:
+    mkdir -pv ~/.config/waybar
+    ln -svf '{{absolute_path("./home/waybar/config.jsonc")}}' ~/.config/waybar/config.jsonc
+    ln -svf '{{absolute_path("./home/waybar/style.css")}}' ~/.config/waybar/style.css
+
 # Meta-recipe for setting up desktop apps.
 [group("desktop")]
 desktop: labwc kanshi rofi foot themes
@@ -150,6 +157,8 @@ services:
     systemctl --user enable kanshi.service
     # Only used on niri
     systemctl --user enable xwayland-satellite.service
+    systemctl --user enable waybar.service
+    systemctl --user enable waybar-config.path
 
     systemctl --user enable foot-server.socket
     systemctl --user enable atuin-daemon.socket

@@ -56,6 +56,7 @@ Software stack
 - Shell: ``app-shells/fish``. Might consider ``nushell`` at some point too.
 - Shell history: ``app-shells/atuin``, with daemon enabled as a systemd socket activation unit
 - Launcher: ``gui-apps/rofi-wayland``
+- Topbar: ``gui-apps/waybar``, automatically reloaded by systemd when 
 
 Theming
 ~~~~~~~
