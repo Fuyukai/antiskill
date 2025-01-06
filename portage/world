@@ -59,8 +59,10 @@ media-fonts/twemoji
 media-sound/pavucontrol
 media-sound/playerctl
 media-sound/spotify
+media-video/mpv
 media-video/pipewire
-net-im/telegram-desktop
+net-fs/sshfs
+net-im/telegram-desktop-bin
 net-im/vesktop-bin
 sys-apps/eza
 sys-apps/flatpak
