@@ -75,6 +75,7 @@ sys-apps/systemctl-tui
 sys-apps/xdg-desktop-portal-gtk
 sys-block/zram-init
 sys-boot/limine
+sys-devel/crossdev
 sys-devel/mold
 sys-fs/btrfs-progs
 sys-fs/duf
