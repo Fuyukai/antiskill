@@ -1,0 +1,5 @@
+cross-arm-none-linux-gnueabihf/binutils -multilib -pgo
+cross-arm-none-linux-gnueabihf/linux-headers -selinux -multilib
+cross-arm-none-linux-gnueabihf/glibc static-libs -selinux -libraries -multilib
+cross-arm-none-linux-gnueabihf/gcc -selinux -d -objc -objc++ -objc-gc -vtv -sanitize -multilib
+cross-arm-none-linux-gnueabihf/gdb -selinux -multilib
