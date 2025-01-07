@@ -80,5 +80,7 @@ gui-apps/waybar mpris
 app-editors/vscode egl
 media-fonts/iosevka iosevka-aile iosevka-ss14 
 
+app-emulation/qemu QEMU_SOFTMMU_TARGETS: arm aarch64 riscv32 riscv64 
+
 # no need for xfce4-panel
 xfce-base/thunar -trash-panel-plugin
