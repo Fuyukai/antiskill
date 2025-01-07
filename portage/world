@@ -91,6 +91,7 @@ sys-fs/duf
 sys-fs/zfs-kmod
 sys-kernel/cachyos-sources
 sys-kernel/gentoo-kernel-bin
+sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-kernel/scx
 sys-process/htop
