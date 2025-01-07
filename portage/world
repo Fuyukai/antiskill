@@ -21,6 +21,15 @@ app-shells/fish
 app-shells/nushell
 app-shells/zoxide
 cosmic-de/cosmic-files
+cross-arm-none-eabi/binutils
+cross-arm-none-eabi/gcc
+cross-arm-none-eabi/gdb
+cross-arm-none-eabi/newlib
+cross-arm-none-linux-gnueabihf/binutils
+cross-arm-none-linux-gnueabihf/gcc
+cross-arm-none-linux-gnueabihf/gdb
+cross-arm-none-linux-gnueabihf/glibc
+cross-arm-none-linux-gnueabihf/linux-headers
 dev-build/just
 dev-debug/gdb
 dev-lang/rust-bin
