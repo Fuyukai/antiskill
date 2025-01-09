@@ -7,6 +7,9 @@
 media-libs/libcanberra alsa
 media-video/pipewire sound-server pipewire-alsa flatpak -bluetooth
 
+# For things like GB dictionariees
+*/* L10N: -* en en-GB
+
 # Use dbus-broker ratther than regular dbus.
 */* dbus-broker
 
