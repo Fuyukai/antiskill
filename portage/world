@@ -3,6 +3,7 @@ app-arch/engrampa
 app-editors/micro
 app-editors/nano
 app-editors/vscode
+app-emulation/qemu
 app-eselect/eselect-repository
 app-misc/byobu
 app-misc/ckb
@@ -20,7 +21,6 @@ app-shells/atuin
 app-shells/fish
 app-shells/nushell
 app-shells/zoxide
-cosmic-de/cosmic-files
 cross-arm-none-eabi/binutils
 cross-arm-none-eabi/gcc
 cross-arm-none-eabi/gdb
@@ -41,6 +41,7 @@ dev-util/pkgdev
 dev-util/rustup
 dev-vcs/git
 games-misc/lolcat-ur0
+games-simulation/openrct2
 games-util/joycond
 games-util/steam-launcher
 gui-apps/foot
@@ -69,6 +70,7 @@ media-fonts/noto-cjk
 media-fonts/noto-emoji
 media-fonts/terminus-font
 media-fonts/twemoji
+media-gfx/qimgv
 media-sound/pavucontrol
 media-sound/playerctl
 media-sound/spotify
@@ -77,8 +79,11 @@ media-video/pipewire
 net-fs/sshfs
 net-im/telegram-desktop-bin
 net-im/vesktop-bin
+net-irc/kvirc
+net-irc/weechat
 sys-apps/eza
 sys-apps/flatpak
+sys-apps/lm-sensors
 sys-apps/ripgrep
 sys-apps/systemctl-tui
 sys-apps/xdg-desktop-portal-gtk
@@ -100,7 +105,6 @@ www-misc/profile-sync-daemon
 x11-drivers/nvidia-drivers
 x11-libs/gtk3-classic-patches
 x11-misc/qt5ct
-x11-terms/ghostty
 x11-themes/adw-gtk3
 x11-themes/catppuccin-cursors-bin
 x11-themes/kvantum
