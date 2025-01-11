@@ -1,5 +1,7 @@
+app-admin/eclean-kernel
 app-admin/sudo-rs
 app-arch/engrampa
+app-arch/unrar
 app-editors/micro
 app-editors/nano
 app-editors/vscode
@@ -13,6 +15,7 @@ app-misc/hyfetch
 app-misc/nwg-look
 app-misc/wayland-utils
 app-misc/zellij
+app-office/gnumeric
 app-portage/emlop
 app-portage/gentoolkit
 app-portage/metagen
@@ -81,6 +84,7 @@ net-im/telegram-desktop-bin
 net-im/vesktop-bin
 net-irc/kvirc
 net-irc/weechat
+net-p2p/qbittorrent
 sys-apps/eza
 sys-apps/flatpak
 sys-apps/lm-sensors
