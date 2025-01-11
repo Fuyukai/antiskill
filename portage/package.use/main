@@ -25,6 +25,9 @@ media-video/pipewire sound-server pipewire-alsa flatpak -bluetooth
 # Things tend to break if I do this :(
 */* introspection
 
+# For font support etc
+*/* cjk
+
 # Use the latest Python.
 */* PYTHON_TARGETS: python3_13
 */* PYTHON_SINGLE_TARGET: -* python3_13
