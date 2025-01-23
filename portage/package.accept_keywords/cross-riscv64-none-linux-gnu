@@ -1,0 +1,5 @@
+cross-riscv64-none-linux-gnu/linux-headers riscv ~riscv -amd64 -~amd64
+cross-riscv64-none-linux-gnu/glibc riscv ~riscv -amd64 -~amd64
+cross-riscv64-none-linux-gnu/binutils riscv ~riscv -amd64 -~amd64
+cross-riscv64-none-linux-gnu/gcc riscv ~riscv -amd64 -~amd64
+cross-riscv64-none-linux-gnu/gdb riscv ~riscv -amd64 -~amd64

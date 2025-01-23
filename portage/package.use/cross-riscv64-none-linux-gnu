@@ -1,0 +1,5 @@
+cross-riscv64-none-linux-gnu/binutils -multilib
+cross-riscv64-none-linux-gnu/linux-headers -selinux -multilib
+cross-riscv64-none-linux-gnu/glibc static-libs -selinux -libraries -multilib
+cross-riscv64-none-linux-gnu/gcc -sanitize -vtv -selinux -d -objc -objc++ -objc-gc -vtv -sanitize -multilib
+cross-riscv64-none-linux-gnu/gdb -selinux -multilib

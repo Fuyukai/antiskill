@@ -1,0 +1,5 @@
+cross-riscv64-none-linux-gnu/linux-headers cross-riscv64-none-linux-gnu/linux-headers.conf
+cross-riscv64-none-linux-gnu/glibc cross-riscv64-none-linux-gnu/glibc.conf
+cross-riscv64-none-linux-gnu/binutils cross-riscv64-none-linux-gnu/binutils.conf
+cross-riscv64-none-linux-gnu/gcc cross-riscv64-none-linux-gnu/gcc.conf
+cross-riscv64-none-linux-gnu/gdb cross-riscv64-none-linux-gnu/gdb.conf

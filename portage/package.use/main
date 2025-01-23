@@ -75,6 +75,8 @@ gnome-base/gvfs -cdda
 ## Terminal apps
 app-misc/tmux sixel
 
+net-libs/nodejs corepack
+
 ## Desktop & desktop apps
 net-im/vesktop-bin L10N: -*
 
@@ -90,3 +92,12 @@ app-emulation/qemu QEMU_SOFTMMU_TARGETS: arm aarch64 riscv32 riscv64
 
 # no need for xfce4-panel
 xfce-base/thunar -trash-panel-plugin
+
+games-simulation/openrct2 scripting
+
+## Fixes
+# https://bugs.gentoo.org/935459
+app-containers/runc -hardened
+
+# foot breaks without this
+dev-libs/libutf8proc -cjk

@@ -1,0 +1,4 @@
+cross-riscv32-none-elf/newlib riscv ~riscv -amd64 -~amd64
+cross-riscv32-none-elf/binutils riscv ~riscv -amd64 -~amd64
+cross-riscv32-none-elf/gcc riscv ~riscv -amd64 -~amd64
+cross-riscv32-none-elf/gdb riscv ~riscv -amd64 -~amd64

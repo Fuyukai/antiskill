@@ -1,0 +1,4 @@
+cross-riscv32-none-elf/binutils multilib
+cross-riscv32-none-elf/newlib -selinux -libraries multilib
+cross-riscv32-none-elf/gcc cxx -openmp -fortran -hardened -default-stack-clash-protection -ssp -sanitize -vtv -selinux -d -objc -objc++ -objc-gc -vtv -sanitize multilib
+cross-riscv32-none-elf/gdb -selinux multilib
