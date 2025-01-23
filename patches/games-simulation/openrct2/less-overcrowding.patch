@@ -1,0 +1,13 @@
+diff --git a/src/openrct2/entity/Peep.cpp b/src/openrct2/entity/Peep.cpp
+index 109f720b09..234ebd1551 100644
+--- a/src/openrct2/entity/Peep.cpp
++++ b/src/openrct2/entity/Peep.cpp
+@@ -2143,7 +2143,7 @@ static void PeepFootpathMoveForward(Peep* peep, const CoordsXYE& coords, bool va
+         }
+     }
+ 
+-    if (crowded >= 10 && guest->State == PeepState::Walking && (ScenarioRand() & 0xFFFF) <= 21845)
++    if (crowded >= 15 && guest->State == PeepState::Walking && (ScenarioRand() & 0xFFFF) <= 21845)
+     {
+         guest->InsertNewThought(PeepThoughtType::Crowded);
+         guest->HappinessTarget = std::max(0, guest->HappinessTarget - 14);
