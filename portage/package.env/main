@@ -2,3 +2,5 @@ sys-libs/glibc no-mold debug
 #sys-apps/ripgrep llvm-lto
 gui-apps/walker no-mold
 app-containers/runc no-lto no-mold
+
+games-simulation/openrct2 o3
