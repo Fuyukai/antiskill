@@ -8,5 +8,6 @@
 */*::xarblu-overlay ~amd64
 */*::khoverlay ~amd64
 */*::steam-overlay ~amd64
+*/*::Miezhiko ~amd64
 
 cosmic-de/* ~amd64
