@@ -60,6 +60,8 @@ sys-apps/hwloc VIDEO_CARDS: -*
 
 sys-fs/btrfs-progs -man
 
+sys-kernel/cachyos-kernel -* hardened initramfs lto strip clang
+
 # Temporary: Prevent mold pulling in everything.
 sys-kernel/cachyos-sources zfs -autofdo -hardened
 
@@ -93,7 +95,7 @@ app-emulation/qemu QEMU_SOFTMMU_TARGETS: arm aarch64 riscv32 riscv64
 # no need for xfce4-panel
 xfce-base/thunar -trash-panel-plugin
 
-games-simulation/openrct2 scripting
+games-simulation/openrct2 scripting rich-presence
 
 ## Fixes
 # https://bugs.gentoo.org/935459
