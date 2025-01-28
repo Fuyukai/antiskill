@@ -102,7 +102,6 @@ net-im/telegram-desktop-bin
 net-im/vesktop-bin
 net-irc/kvirc
 net-irc/weechat
-net-libs/nodejs
 net-p2p/qbittorrent
 sys-apps/eza
 sys-apps/flatpak
