@@ -1,0 +1,3 @@
+COMMON_FLAGS="-Og -ggdb3 -pipe -march=native -mtune=native -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"

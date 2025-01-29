@@ -3,4 +3,7 @@ sys-libs/glibc no-mold debug
 gui-apps/walker no-mold
 app-containers/runc no-lto no-mold
 
+# optimised, o3 stuff
 games-simulation/openrct2 o3
+gui-apps/foot o3
+media-libs/fcft o3
